@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: dc25-gems-farmer
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn gems_web:app
+    plan: free
